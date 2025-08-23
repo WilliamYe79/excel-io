@@ -387,10 +387,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📧 **Email**: [your-email@example.com]
+- 📧 **Email**: [yeshengwei@gmail.com]
 - 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/excel-io/issues)
 - 📖 **Documentation**: [Wiki](https://github.com/your-username/excel-io/wiki)
 
 ---
 
+<div align="center">
+
+**⭐ Would you give me a star if this project is helpful to you?**
+
+**🔗 Share this project to more friends who need to read/write Excel spreadsheet files in their Java projects.**
+
+Made with ❤️ by William YE of G-WILL Team
+
 **Excel-IO** - Making Excel operations in Java intuitive and powerful. 🚀
+
+</div>
