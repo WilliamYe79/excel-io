@@ -170,7 +170,7 @@ mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.ExampleRunner"
 mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.BasicUsageExamples"
 mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.TypedReadingExamples"
 mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.CategorizedReportExamples"
-mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.AlternatingRowExamples"
+mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.AlternatingRowsExamples"
 mvn exec:java -Dexec.mainClass="com.gwill.io.excel.examples.RealWorldExample"
 
 # Note: mvn test runs JUnit tests (when created), not examples

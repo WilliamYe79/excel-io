@@ -4,14 +4,13 @@ import com.gwill.io.excel.ExcelIO;
 import com.gwill.io.excel.util.ResourceUtil;
 
 import java.io.InputStream;
-import java.time.LocalDate;
 import java.util.*;
 
 /**
  * Examples demonstrating alternating row styles for better table readability.
  * Shows how to create Excel tables with zebra striping using template styles.
  */
-public class AlternatingRowExamples {
+public class AlternatingRowsExamples {
 
     public static void main(String[] args) {
         System.out.println("=== Excel-IO Alternating Row Examples ===\n");
