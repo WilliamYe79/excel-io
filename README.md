@@ -388,8 +388,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - 📧 **Email**: [yeshengwei@gmail.com]
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/excel-io/issues)
-- 📖 **Documentation**: [Wiki](https://github.com/your-username/excel-io/wiki)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/WilliamYe79/excel-io/issues)
+- 📖 **Documentation**: [Wiki](https://github.com/WilliamYe79/excel-io/wiki)
 
 ---
 
