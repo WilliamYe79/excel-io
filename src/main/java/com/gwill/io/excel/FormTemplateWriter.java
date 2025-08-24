@@ -24,7 +24,7 @@ import java.util.*;
  *   <li>Rows 10-15: Form footer placeholders (totals, signatures, etc.)</li>
  * </ul>
  *
- * <h3>Usage Example</h3>
+ * <h2>Usage Example</h2>
  * <pre>{@code
  * ExcelIO.formTemplate("form_template.xlsx")
  *     .setValue("invoiceNumber", "INV-001")

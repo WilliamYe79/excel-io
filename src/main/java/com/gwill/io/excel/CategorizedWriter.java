@@ -15,7 +15,7 @@ import java.util.List;
  * Specialized writer for creating categorized Excel reports with summary and detail rows.
  * This creates hierarchical reports where each category (summary row) can have multiple detail rows.
  * 
- * <h3>Example Structure</h3>
+ * <h2>Example Structure</h2>
  * <pre>
  * Headers:   | Product | Q1 Sales | Q2 Sales | Total |
  * Summary:   | Laptops |   5000   |   6000   | 11000 |  ← Category row
@@ -26,7 +26,7 @@ import java.util.List;
  * Detail:    |  - Samsung| 3000   |   3000   |  6000 |  ← Detail row
  * </pre>
  * 
- * <h3>Usage Example</h3>
+ * <h2>Usage Example</h2>
  * <pre>{@code
  * ExcelIO.write("sales_report.xlsx")
  *     .categorized()

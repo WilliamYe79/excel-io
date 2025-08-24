@@ -76,6 +76,64 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.3.0</version>
       </plugin>
+
+      <!-- Maven Javadoc Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.3</version>
+        <configuration>
+          <source>${java.version}</source>
+          <encoding>UTF-8</encoding>
+          <docencoding>UTF-8</docencoding>
+          <charset>UTF-8</charset>
+          <windowtitle>Excel-IO ${project.version} API</windowtitle>
+          <doctitle>Excel-IO ${project.version} API Documentation</doctitle>
+          <header>&lt;b&gt;Excel-IO ${project.version}&lt;/b&gt;</header>
+          <bottom>
+            Copyright &#169; 2024 Excel-IO Project. All rights reserved.
+          </bottom>
+          <author>true</author>
+          <version>true</version>
+          <use>true</use>
+          <splitindex>true</splitindex>
+          <show>protected</show>
+          <nohelp>false</nohelp>
+          <failOnError>false</failOnError>
+          <failOnWarnings>false</failOnWarnings>
+          <quiet>true</quiet>
+          <additionalJOptions>
+            <additionalJOption>-J-Duser.language=en</additionalJOption>
+            <additionalJOption>-J-Duser.country=US</additionalJOption>
+          </additionalJOptions>
+          <links>
+            <link>https://docs.oracle.com/en/java/javase/22/docs/api/</link>
+            <link>https://poi.apache.org/apidocs/dev/</link>
+          </links>
+          <groups>
+            <group>
+              <title>Core API</title>
+              <packages>com.gwill.io.excel</packages>
+            </group>
+            <group>
+              <title>Utilities</title>
+              <packages>com.gwill.io.excel.util</packages>
+            </group>
+            <group>
+              <title>Examples</title>
+              <packages>com.gwill.io.excel.examples</packages>
+            </group>
+          </groups>
+        </configuration>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>

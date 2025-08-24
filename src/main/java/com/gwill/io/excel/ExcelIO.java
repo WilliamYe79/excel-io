@@ -8,7 +8,7 @@ import java.nio.file.Path;
  * Main entry point for Excel I/O operations.
  * Provides a fluent, intuitive API for reading and writing Excel files.
  * 
- * <h3>Quick Start - Writing</h3>
+ * <h2>Quick Start - Writing</h2>
  * <pre>{@code
  * ExcelIO.write("output.xlsx")
  *     .sheet("Users")
@@ -18,7 +18,7 @@ import java.nio.file.Path;
  *     .save();
  * }</pre>
  * 
- * <h3>Quick Start - Reading</h3>
+ * <h2>Quick Start - Reading</h2>
  * <pre>{@code
  * List<Map<String, Object>> data = ExcelIO.read("input.xlsx")
  *     .sheet("Users")

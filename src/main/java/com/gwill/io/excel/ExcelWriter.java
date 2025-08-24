@@ -1,6 +1,5 @@
 package com.gwill.io.excel;
 
-import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -16,11 +15,11 @@ import java.util.Map;
 /**
  * Fluent builder for writing XLSX Excel files.
  * Provides an intuitive API for creating Excel files with multiple sheets and various data types.
- * 
- * <p><strong>Note:</strong> This library supports .xlsx files only. For .xls files, 
+ *
+ * <p><strong>Note:</strong> This library supports .xlsx files only. For .xls files,
  * please open them in Excel and save as .xlsx format first.</p>
- * 
- * <h3>Basic Usage</h3>
+ *
+ * <h2>Basic Usage</h2>
  * <pre>{@code
  * ExcelIO.write("output.xlsx")
  *     .sheet("Data")
@@ -29,8 +28,8 @@ import java.util.Map;
  *     .row("Jane", 25, 60000)
  *     .save();
  * }</pre>
- * 
- * <h3>With Custom Encoding</h3>
+ *
+ * <h2>With Custom Encoding</h2>
  * <pre>{@code
  * ExcelIO.write("output.xlsx")
  *     .encoding("UTF-8")  // For string data processing
@@ -39,8 +38,8 @@ import java.util.Map;
  *     .row("张三", 30, 50000)
  *     .save();
  * }</pre>
- * 
- * <h3>From Collections</h3>
+ *
+ * <h2>From Collections</h2>
  * <pre>{@code
  * List<User> users = getUserList();
  * ExcelIO.write("users.xlsx")
@@ -49,7 +48,7 @@ import java.util.Map;
  * }</pre>
  */
 public class ExcelWriter {
-    
+
     private final String filePath;
     private final List<SheetBuilder> sheets = new ArrayList<>();
     private SheetBuilder currentSheet;
@@ -62,7 +61,7 @@ public class ExcelWriter {
     /**
      * Set the encoding for processing string data.
      * Default is UTF-8, which works for most international characters.
-     * 
+     *
      * @param encodingName the encoding name (e.g., "UTF-8", "GBK", "ISO-8859-1")
      * @return this ExcelWriter for method chaining
      * @throws ExcelIOException if the encoding is not supported
@@ -78,7 +77,7 @@ public class ExcelWriter {
 
     /**
      * Set the encoding for processing string data.
-     * 
+     *
      * @param charset the charset to use
      * @return this ExcelWriter for method chaining
      */
@@ -89,7 +88,7 @@ public class ExcelWriter {
 
     /**
      * Add a new sheet with the given name and start building it.
-     * 
+     *
      * @param sheetName the name of the sheet
      * @return this ExcelWriter for method chaining
      */
@@ -102,7 +101,7 @@ public class ExcelWriter {
     /**
      * Add a new sheet populated from a collection of objects.
      * Headers will be automatically inferred from the first object's fields/properties.
-     * 
+     *
      * @param sheetName the name of the sheet
      * @param data the collection of objects to write
      * @return this ExcelWriter for method chaining
@@ -116,7 +115,7 @@ public class ExcelWriter {
 
     /**
      * Set the headers for the current sheet.
-     * 
+     *
      * @param headers the column headers
      * @return this ExcelWriter for method chaining
      */
@@ -128,7 +127,7 @@ public class ExcelWriter {
 
     /**
      * Add a data row to the current sheet.
-     * 
+     *
      * @param values the row values
      * @return this ExcelWriter for method chaining
      */
@@ -140,7 +139,7 @@ public class ExcelWriter {
 
     /**
      * Add multiple data rows to the current sheet.
-     * 
+     *
      * @param rows the collection of row data
      * @return this ExcelWriter for method chaining
      */
@@ -152,7 +151,7 @@ public class ExcelWriter {
 
     /**
      * Save the Excel file to the specified path.
-     * 
+     *
      * @throws ExcelIOException if there's an error writing the file
      */
     public void save() {
@@ -221,12 +220,12 @@ public class ExcelWriter {
                     .map(key -> processStringValue(key, encoding))
                     .toArray(String[]::new);
                 builder.header(headerArray);
-                
+
                 for (Map<String, Object> row : data) {
                     Object[] values = first.keySet().stream()
                         .map(key -> {
                             Object value = row.get(key);
-                            return value instanceof String ? 
+                            return value instanceof String ?
                                 processStringValue((String) value, encoding) : value;
                         })
                         .toArray();
@@ -280,7 +279,7 @@ public class ExcelWriter {
                 for (int i = 0; i < headers.size(); i++) {
                     Cell cell = headerRow.createCell(i);
                     cell.setCellValue(headers.get(i));
-                    
+
                     // Style headers (bold)
                     CellStyle headerStyle = workbook.createCellStyle();
                     Font font = workbook.createFont();

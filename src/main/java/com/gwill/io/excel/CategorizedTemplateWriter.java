@@ -22,7 +22,7 @@ import java.util.List;
  *   <li>Row 2: Detail row styles</li>
  * </ul>
  *
- * <h3>Usage Example</h3>
+ * <h2>Usage Example</h2>
  * <pre>{@code
  * ExcelIO.categorizedFromTemplate("template.xlsx")
  *     .sheet("Sales Report")

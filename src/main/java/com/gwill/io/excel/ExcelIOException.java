@@ -2,8 +2,8 @@ package com.gwill.io.excel;
 
 /**
  * Runtime exception thrown when Excel I/O operations fail.
- * This is a unchecked exception to keep the API clean and simple.
- * 
+ * This is an unchecked exception to keep the API clean and simple.
+ *
  * @author William Ye
  * @version 1.0.0
  */

@@ -18,14 +18,14 @@ import java.util.*;
  * <p><strong>Note:</strong> This library supports .xlsx files only. For .xls files, 
  * please open them in Excel and save as .xlsx format first.</p>
  * 
- * <h3>Basic Reading</h3>
+ * <h2>Basic Reading</h2>
  * <pre>{@code
  * List<Map<String, Object>> data = ExcelIO.read("input.xlsx")
  *     .sheet("Data")
  *     .asMaps();
  * }</pre>
  * 
- * <h3>Type-Safe Reading with Metadata</h3>
+ * <h2>Type-Safe Reading with Metadata</h2>
  * <pre>{@code
  * List<Map<String, Object>> typedData = ExcelIO.read("data.xlsx")
  *     .withMetadata("metadata.xlsx")
@@ -33,7 +33,7 @@ import java.util.*;
  *     .asMaps();
  * }</pre>
  * 
- * <h3>Inline Type Specification</h3>
+ * <h2>Inline Type Specification</h2>
  * <pre>{@code
  * List<Map<String, Object>> typedData = ExcelIO.read("data.xlsx")
  *     .withTypes("name:java.lang.String", "age:java.lang.Integer")

@@ -20,7 +20,7 @@ import java.util.Map;
  * <p>This writer applies different styles to alternating rows (zebra striping) which makes
  * large tables much easier to read, especially for reports with many rows of data.</p>
  *
- * <h3>Template Format</h3>
+ * <h2>Template Format</h2>
  * <p>The template Excel file should have exactly 3 rows with the desired styles:</p>
  * <ul>
  *   <li>Row 0: Header row styles</li>
@@ -28,7 +28,7 @@ import java.util.Map;
  *   <li>Row 2: Even data row styles (rows 2, 4, 6, etc.)</li>
  * </ul>
  *
- * <h3>Usage Example</h3>
+ * <h2>Usage Example</h2>
  * <pre>{@code
  * ExcelIO.alternatingRows("table_template.xlsx")
  *     .sheet("Employee Report")
